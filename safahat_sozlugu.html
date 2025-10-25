@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>📜 Safahat Sözlüğü</title>
+<style>
+    body {
+        font-family: "Georgia", serif;
+        background: #f6f0e0;
+        background-image: radial-gradient(rgba(139,115,85,0.15) 1px, transparent 1px);
+        background-size: 20px 20px;
+        color: #3b2f2f;
+        margin: 0;
+        padding: 20px;
+    }
+
+    h1 {
+        text-align: center;
+        color: #5b3a29;
+        text-shadow: 1px 1px #e0d2b5;
+        letter-spacing: 2px;
+    }
+
+    .search-box {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    input {
+        padding: 10px 15px;
+        width: 300px;
+        font-size: 16px;
+        border: 2px solid #a08360;
+        border-radius: 10px;
+        background: #fff8e7;
+        box-shadow: 2px 2px 5px rgba(100,80,60,0.2);
+    }
+
+    .word {
+        background: #fffaf0;
+        border-left: 5px solid #a67c52;
+        margin: 15px auto;
+        max-width: 800px;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 0 5px rgba(120,100,80,0.2);
+    }
+
+    .word h2 {
+        color: #4b2e05;
+        margin-bottom: 8px;
+        font-size: 22px;
+    }
+
+    .meaning {
+        font-weight: bold;
+        color: #2c1b0e;
+    }
+
+    .example {
+        font-style: italic;
+        color: #4b3b2a;
+        margin-top: 5px;
+    }
+
+    footer {
+        margin-top: 40px;
+        text-align: center;
+        color: #4a3822;
+        font-size: 14px;
+        border-top: 1px solid #cbb48c;
+        padding-top: 10px;
+    }
+
+    footer img {
+        width: 60px;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+</style>
+</head>
+<body>
+
+<h1>📜 Safahat Sözlüğü</h1>
+
+<div class="search-box">
+    <input type="text" id="searchInput" placeholder="Kelime ara...">
+</div>
+
+<div id="dictionary">
+    
+    <div class="word">
+        <h2>ACÛZE</h2>
+        <p class="meaning">Anlamı: Yaşlı, çirkin ve huysuz kadın</p>
+        <p class="example">Örnek: Köyün dışındaki viranede yaşayan bu acuze, herkesin çocukluk hikayesini bilirdi.</p>
+    </div>
+
+    <div class="word">
+        <h2>ÂDEM</h2>
+        <p class="meaning">Anlamı: İyi, olgun ve erdemli insan</p>
+        <p class="example">Örnek: Paranın değil âdem olmanın peşinde. </p>
+    </div>
+
+    <div class="word">
+        <h2>ÂGÛŞ</h2>
+        <p class="meaning">Anlamı: Kucak, kucaklama</p>
+        <p class="example">Örnek: Çocuk ,annesinin âgûşuna koştu.</p>
+    </div>
+
+    <div class="word">
+        <h2>AHRAR-I ÎZÂM</h2>
+        <p class="meaning">Anlamı: Büyük, hür kişiler</p>
+        <p class="example">Örnek: Ahrâr-ı İzâm haksızlığa karşı durur.</p>
+    </div>
+
+    <div class="word">
+        <h2>ÂHENG-İ HİLKAT</h2>
+        <p class="meaning">Anlamı: Yaratılışın uyumu, doğadaki düzen ve güzellik</p>
+        <p class="example">Örnek: Gecenin sessizliğinde âheng-i hilkatin huzur verici sesini hissettim.</p>
+    </div>
+
+    <div class="word">
+        <h2>AHFÂD</h2>
+        <p class="meaning">Anlamı: Torunlar, sonraki kuşaklar</p>
+        <p class="example">Örnek: Biz ahfâd olarak atalarımızın mirasına sahip çıkamadık.</p>
+    </div>
+
+    <div class="word">
+        <h2>AKVÂM</h2>
+        <p class="meaning">Anlamı: Kavimler</p>
+        <p class="example">Örnek: Bu topraklarda binlerce sene birçok kavim yaşamış ve günümüze bu akvama ait binlerce eser kalmıştır.</p>
+    </div>
+
+    <div class="word">
+        <h2>ÂMÂL</h2>
+        <p class="meaning">Anlamı: Kolay,zahmetsiz,güç olmayan</p>
+        <p class="example">Örnek: Yılların emeği bir gecede berhava oldu.</p>
+    </div>
+
+    <div class="word">
+        <h2>ÂSÂN</h2>
+        <p class="meaning">Anlamı: Kolay, zahmetsiz, güç olmayan</p>
+        <p class="example">Örnek: Bu kadar çalışmadan sonra bu sorular bize âsân gelir.</p>
+    </div>
+
+    <div class="word">
+        <h2>ÂSÂR</h2>
+        <p class="meaning">Anlamı: Eserler, kalıntılar</p>
+        <p class="example">Örnek: Sanatçıyı değerlendirirken sadece âsârını değil kişiliğini de ele almak gerekir.</p>
+    </div>
+
+    <div class="word">
+        <h2>ATÂLET</h2>
+        <p class="meaning">Anlamı: Tembellik, işsiz olma, işsiz kalma</p>
+        <p class="example">Örnek: Uzun süre atâlet içinde geçen hayatı onu hayallerinden uzaklaştırdı.</p>
+    </div>    
+
+    <div class="word">
+        <h2>ÂTEŞNAK</h2>
+        <p class="meaning">Anlamı: Ateşli olarak, tutkulu bir biçimde.</p>
+        <p class="example">Örnek: Şair,şiirlerini âteşnak bir duygu yoğunluğuyla okuyordu.</p>
+    </div>
+
+    <div class="word">
+        <h2>BERHÂNE</h2>
+        <p class="meaning">Anlamı: Yıkık dökük, kullanışsız ve büyük ev, barhane </p>
+        <p class="example">Örnek: Zamanın sessizliğe gömdüğü o berhâne, bir dönemin acılarını saklıyordu.</p>
+    </div>
+
+    <div class="word">
+        <h2>BEŞÛŞ</h2>
+        <p class="meaning">Anlamı: Güleryüzlü, sevimli, tatlı dilli, neşeli</p>
+        <p class="example">Örnek: Yaşlı kadının beşuş hâli odadakilere huzur veriyordu.</p>
+    </div>
+
+    <div class="word">
+        <h2>BÎDÂR</h2>
+        <p class="meaning">Anlamı: Uyanık, farkında, bilinçli, canlı, diri, hareketli</p>
+        <p class="example">Örnek: Toplumun bîdar insanlara ihtiyacı var.</p>
+    </div>
+
+    <div class="word">
+        <h2>BİZAR</h2>
+        <p class="meaning">Anlamı: Bıkkın, usanmış, skılmış</p>
+        <p class="example">Örnek: Tüm bu olanlar beni bizar etti, hayattan soğuttu.</p>
+    </div>
+
+    <div class="word">
+        <h2>BUHAYRE</h2>
+        <p class="meaning">Anlamı: Göl, göl benzeri, su yeri</p>
+        <p class="example">Örnek: Evlerinin arkasındaki buhayrede ördekler yüzerdi.</p>
+    </div>  
+
+    <div class="word">
+        <h2>CEDELGÂH-I MAÎŞET</h2>
+        <p class="meaning">Anlamı: Geçim kaygısı, hayat mücadelesi</p>
+        <p class="example">Örnek: Herkes kendi cedelgâh-ı maîşeti içinde ayakta kalmaya çalışıyor.</p>
+    </div>
+
+    <div class="word">
+        <h2>CERÎDE</h2>
+        <p class="meaning">Anlamı: Gazete, dergi</p>
+        <p class="example">Örnek: Sabahları kahvede oturup cerîde okumayı severdi.</p>
+    </div>
+
+    <div class="word">
+        <h2>CEVELAN</h2>
+        <p class="meaning">Anlamı: Bir yere gidip dönmek, yer değiştirmek, seyehat etmek</p>
+        <p class="example">Örnek: Avrupa cevelanı sırasında rahatsızlanan doktor,yurda vaktinden önce dönmek zorunda kaldı.</p>
+    </div>
+
+    <div class="word">
+        <h2>CEVF</h2>
+        <p class="meaning">Anlamı: İç boşluk, oyuk, karın, gövde içi</p>
+        <p class="example">Örnek: Sincap,ağacın cevfine sığınmış kışı geçireceği bir yuva bulmuştu.</p>
+    </div>
+
+    <div class="word">
+        <h2>CUMBA</h2>
+        <p class="meaning">Anlamı: Bir binanın üst katından sokağa veya avluya doğru dışarıya taşan kapalı balkon, pencere çıkıntısı</p>
+        <p class="example">Örnek: Eski konağın sokağa bakan güzel bir cumbası vardı.</p>
+    </div>
+
+    <div class="word">
+        <h2>CÛŞA-CÛŞ</h2>
+        <p class="meaning">Anlamı: Coşku içinde olma, kaynama, taşma hali</p>
+        <p class="example">Örnek: Marş okununca kalabalık cûşa-cûş oldu, kalabalıkta bir dalgalanma oldu.</p>
+    </div>
+
+    <div class="word">
+        <h2>DEYCÛR</h2>
+        <p class="meaning">Anlamı: Zifiri karanlık, kapkara</p>
+        <p class="example">Örnek: Deycûr bir geceydi,ay bulutların ardına gizlenmişti.</p>
+    </div>
+
+    <div class="word">
+        <h2>DÜSTÛR</h2>
+        <p class="meaning">Anlamı: Kural, ilke, yasa, anayasa veya bir işte uyulması gereken temel ölçü</p>
+        <p class="example">Örnek: Güven,onun hayattaki en önemli düstûrudur.</p>
+    </div>
+
+    <div class="word">
+        <h2>EB'ÂD</h2>
+        <p class="meaning">Anlamı: Uzaklıklar, mesafeler, boyutlar</p>
+        <p class="example">Örnek: Birbirimize çok yakın gibi hissetsek de aramızdaki eb’âdın gerçekliği vuruyor ruhuma.</p>
+    </div>
+
+    <div class="word">
+        <h2>EBKEM</h2>
+        <p class="meaning">Anlamı: Dilsiz, konuşmayan</p>
+        <p class="example">Örnek: Kaza geçirdikten sonra bir müddet ebkem kaldı, kimseyle konuşmadı.</p>
+    </div>
+
+    <div class="word">
+        <h2>EDVÂR-I HAYÂT</h2>
+        <p class="meaning">Anlamı: Hayatın devreleri, yaşam evreleri</p>
+        <p class="example">Örnek: Kazadan sağ kurtulan ihtiyar, olay anında edvâr-ı hayâtının gözünün önünden geçtiğini söyledi.  </p>
+    </div>
+
+    <div class="word">
+        <h2>ENFİYE</h2>
+        <p class="meaning">Anlamı: Kurutulmuş tütünden yapılan ve burna çekilen keyif verici, aksırtıcı toz; burun otu  </p>
+        <p class="example">Örnek: Dedem cebindeki enfiye kutusunu çıkartıp enfiyeyi burnuna çekti.</p>
+    </div>
+
+    <div class="word">
+        <h2>ENVÂR</h2>
+        <p class="meaning">Anlamı: Işıklar, parıltılar</p>
+        <p class="example">Örnek: Teknolojik gelişmelerin envârı gizemli,çözülemez sanılan birçok konuyu anlamamızı sağladı.</p>
+    </div>
+
+    <div class="word">
+        <h2>EŞHAS</h2>
+        <p class="meaning">Anlamı: Kişiler, şahıslar</p>
+        <p class="example">Örnek: Her zaman yüksek mertebelerdeki eşhasa saygılı olmak gerekir.</p>
+    </div>
+
+    <div class="word">
+        <h2>EFTÂL</h2>
+        <p class="meaning">Anlamı: Çocuklar, küçük yaştaki kimseler</p>
+        <p class="example">Örnek: Etfâlin yüzündeki tebessüm bu milletin geleceğidir.</p>
+    </div>
+
+    <div class="word">
+        <h2>FELÂH</h2>
+        <p class="meaning">Anlamı: Kurtuluş, huzura erme.</p>
+        <p class="example">Örnek: Her karanlığın sonunda bir felâh saklıdır, yeter ki umudunu yitirme.</p>
+    </div>
+
+    <div class="word">
+        <h2>FERŞ-İ NÎLGÜN</h2>
+        <p class="meaning">Anlamı: Göğün rengini almış yer, sabahın ilk ışıklarıyla boyanmış toprak</p>
+        <p class="example">Örnek: Güneş,ferş-i nîlgün üzerinde altın gibi parlıyordu.</p>
+    </div>
+
+    <div class="word">
+        <h2>FEVKA'L BEŞER</h2>
+        <p class="meaning">Anlamı: İnsanüstü</p>
+        <p class="example">Örnek: İçiniz rahat etsin,fevka'l-beşer bir mücadele verdiniz.</p>
+    </div>
+
+    <div class="word">
+        <h2>FEZA</h2>
+        <p class="meaning">Anlamı: Gökyüzü, uzay, genişlik, engin, boşuk</p>
+        <p class="example">Örnek: Astronotlar fezaya çıkmak için hazırlandı.</p>
+    </div>
+
+    <div class="word">
+        <h2>GAŞY</h2>
+        <p class="meaning">Anlamı: Kendini kaybetme, kendinden geçme, bayılma, bilincini yitirme.</p>
+        <p class="example">Örnek: Kalabalık ve boğucu ortamda kendini kötü hissedip gaşy oldu.</p>
+    </div>
+
+    <div class="word">
+        <h2>GÎRÛDÂR-I MAİŞET</h2>
+        <p class="meaning">Anlamı: İş güç sahibi olan</p>
+        <p class="example">Örnek: O genç, artık gîrûdâr-ı maişet olmanın verdiği güvenle konuşuyordu.</p>
+    </div>
+
+    <div class="word">
+        <h2>GUBÂR</h2>
+        <p class="meaning">Anlamı: Toz</p>
+        <p class="example">Örnek: Gubâra boğulmuş eski kitaplarla dolu loş bir odada açtı gözlerini.</p>
+    </div>
+
+    <div class="word">
+        <h2>GÜBANK-I HAK</h2>
+        <p class="meaning">Anlamı: Allah'ı yücelten, O'nun adını anarak yapılan dua veya sesleniş.</p>
+        <p class="example">Örnek: Müezzinin sesi gülbank-ı Hak gibi yankılandı.</p>
+    </div>
+
+    <div class="word">
+        <h2>HACİL</h2>
+        <p class="meaning">Anlamı: Utanmadan insanların yüzüne bakamamak, mahcup olmak</p>
+        <p class="example">Örnek: Borçları nedeniyle evine haciz gelmesi onu hacil eyledi, utancından sokakağa çıkamaz oldu.</p>
+    </div>
+
+    <div class="word">
+        <h2>HÂLE</h2>
+        <p class="meaning">Anlamı: Bir şeyin çevresinde beliren parlaklık, ışık çemberi</p>
+        <p class="example">Örnek: Sessizliğin içinde parlayan hâleler gibi kaldı anılar</p>
+    </div>
+
+    <div class="word">
+        <h2>HÂLİK</h2>
+        <p class="meaning">Anlamı: Allah</p>
+        <p class="example">Örnek: İyilik et denize at,balık bilmezse Hâlik bilir.</p>
+    </div>
+
+    <div class="word">
+        <h2>HANÜMAN</h2>
+        <p class="meaning">Anlamı: Bir kimsenin evi, ailesi, ocağı, yurdu</p>
+        <p class="example">Örnek: Vicdansız ev sahibi onları hanümanlarından mahrum bırakmıştı.</p>
+    </div>
+
+   <div class="word">
+        <h2>HASİSLİK</h2>
+        <p class="meaning">Anlamı: Cimrilik, cimri davranış</p>
+        <p class="example">Örnek: Hasisliği yüzünden kimseyle arkadaşlık yapamaz hale geldi.</p>
+    </div>
+
+    <div class="word">
+        <h2>HAVF</h2>
+        <p class="meaning">Anlamı: Korku, çekinme, panik</p>
+        <p class="example">Örnek: Havftan titriyor, adımlarını dikkatle atarken bir yandan da etrafı kolaçan ediyordu.</p>
+    </div>
+
+    <div class="word">
+        <h2>HAYME</h2>
+        <p class="meaning">Anlamı: Çadır, göçebe evi, oba</p>
+        <p class="example">Örnek: Ormana kamp yapmaya gittik ama haymemizi götürmeyi unutmuşuz.</p>
+    </div>
+
+    <div class="word">
+        <h2>HEVÂ-DÂR</h2>
+        <p class="meaning">Anlamı: Dost, yâr, taraftar, seven</p>
+        <p class="example">Örnek: Kimse dile getirmiyordu fakat herkes onun fikirlerine hevâ-dâr olduğumun farkındaydı.</p>
+    </div>
+
+    <div class="word">
+        <h2>HİCRÂN</h2>
+        <p class="meaning">Anlamı: Ayrılık, kavuşamama, sevgiliden uzak kalma, hasret, acı</p>
+        <p class="example">Örnek: Onun gidişi gönlümde derin bir hicran yarası bıraktı</p>
+    </div>
+
+    <div class="word">
+        <h2>HİLKAT</h2>
+        <p class="meaning">Anlamı: Yaradılış</p>
+        <p class="example">Örnek: İnsanın hilkati merhamet üzerine kuruludur.</p>
+    </div>
+
+    <div class="word">
+        <h2>HOTOZ</h2>
+        <p class="meaning">Anlamı: Saç süsü,baş tacı,süslü baş örtüsü</p>
+        <p class="example">Örnek: Kadının başındaki hotoz inci ve tüylerle süslenmişti.</p>
+    </div>
+
+    <div class="word">
+        <h2>HURÛŞ</h2>
+        <p class="meaning">Anlamı: Taşkınlık, coşkunluk, birden kabarma, ani hareket, isyan veya saldırı halinde öne atılma</p>
+        <p class="example">Örnek: Halk, zulme karşı büyük bir hurûş içindeydi.</p>
+    </div>
+
+    <div class="word">
+        <h2>HÜSN-İ ŞEHÂDET</h2>
+        <p class="meaning">Anlamı: Bir kişi hakkında iyi tanıklıkta bulunmak, onun hakkında güzel şeyler söylemek </p>
+        <p class="example">Örnek: Onun için herkes hüsn-i şehâdette bulundu.</p>
+    </div>
+
+    <div class="word">
+        <h2>İHYÂ</h2>
+        <p class="meaning">Anlamı: Çok iyi duruma getirme, geliştirme, güçlendirme</p>
+        <p class="example">Örnek: Topladığımız bağışlar bizi ihyâ etti.</p>
+    </div>
+
+    <div class="word">
+        <h2>İLHÂD</h2>
+        <p class="meaning">Anlamı: Yoldan sapmak,İslam dinine ve Kur'an'ın koyduğu kurallara karşı gelme</p>
+        <p class="example">Örnek: Son zamanlarda bazı insanların inançlarını sorgulayarak ilhâde yöneldiği gözlenmektedir.</p>
+    </div>
+
+    <div class="word">
+        <h2>İNÂYET</h2>
+        <p class="meaning">Anlamı: Yardım, lütuf, koruma, ilahi iyilik</p>
+        <p class="example">Örnek: Geriye dönüp baktığında Allah’ın inayetine fazlasıyla sığındığını fark etti.</p>
+    </div>
+
+    <div class="word">
+        <h2>İRFÂN</h2>
+        <p class="meaning">Anlamı: Bilgi, kültür, öğrenme, anlayış, akıl</p>
+        <p class="example">Örnek: İrfân sahibi insanlar toplumun gelişmesine büyük katkılar sağlarlar.</p>
+    </div>
+
+    <div class="word">
+        <h2>İNKIYÂD</h2>
+        <p class="meaning">Anlamı: Bağlanma, itaat etme, biat etme</p>
+        <p class="example">Örnek: Çocuğun kaderine inkıyadı,hayatın yükü karşısındaki teslimiyetini gösteriyor.</p>
+    </div>
+
+    <div class="word">
+        <h2>İNKİŞAF</h2>
+        <p class="meaning">Anlamı: Gelişme, gelişim</p>
+        <p class="example">Örnek: Son yüzyılda yaşanan teknolojik inkişaf hayatı kolaylaştırıken insanları yalnızlaştırdı.</p>
+    </div>
+
+    <div class="word">
+        <h2>İSTİBDÂD</h2>
+        <p class="meaning">Anlamı: Baskı ve zorbalığa dayanan yönetim biçimi</p>
+        <p class="example">Örnek: Ülkedeki istibdâd havası halkın sesini kesmişti.</p>
+    </div>
+
+    <div class="word">
+        <h2>KADÎD</h2>
+        <p class="meaning">Anlamı: Kurutulmuş et,kurumuş;zayıf,çelimsiz insan</p>
+        <p class="example">Örnek: Kadîd kalmış ağaçlar ve çiçekler bir hafta süren yağmurun ardından canlanıverdiler.</p>
+    </div>
+
+    <div class="word">
+        <h2>KALB-İ HAMÛŞ</h2>
+        <p class="meaning">Anlamı: Sessiz, suskun kalp; duygularını gizleyen yürek</p>
+        <p class="example">Örnek: Onun kalb-i hamûşunda fırtınalar kopuyordu ama kimse anlamıyordu.</p>
+    </div>
+
+    <div class="word">
+        <h2>KARHA</h2>
+        <p class="meaning">Anlamı: Yara, bere, iltihaplı yara</p>
+        <p class="example">Örnek: Para, tüm vücuda yayılmış karha gibi toplumu tanınmaz hale getirdi.</p>
+    </div>
+
+    <div class="word">
+        <h2>LÂHUTÎ SADÂ</h2>
+        <p class="meaning">Anlamı: İlahi yani Allah'tan gelen kutsal ses</p>
+        <p class="example">Örnek: Ezan sesi, gökyüzüne yükselen bir lâhutî sadâ gibidir.</p>
+    </div>
+
+    <div class="word">
+        <h2>LÂTİF</h2>
+        <p class="meaning">Anlamı: Zarafet, incelik, nezaket</p>
+        <p class="example">Örnek: Lâtif bir espri ile ortamı neşelendirdi.</p>
+    </div>
+
+    <div class="word">
+        <h2>MA'LÛM</h2>
+        <p class="meaning">Anlamı: Bilinen, belli olan</p>
+        <p class="example">Örnek: Onun ne yapacağı artık ma’lum</p>
+    </div>
+
+    <div class="word">
+        <h2>MAİŞET</h2>
+        <p class="meaning">AnlamI: Geçim, geçim kaynağı</p>
+        <p class="example">Örnek: Ailenin maişeti için sabah erkenden yola çıkardı.</p>
+    </div>
+
+    <div class="word">
+        <h2>MARAZ</h2>
+        <p class="meaning">Anlamı: Hastalık, huy bozukluğu, sorun</p>
+        <p class="example">Örnek: Uzun süren bu hastalık nedeniyle adı "Marazlı" kalmıştı.</p>
+    </div>
+
+    <div class="word">
+        <h2>MATVÎ</h2>
+        <p class="meaning">Anlamı: Bürülmüş, katlanmış</p>
+        <p class="example">Örnek: Matvî sayfalar bir bir açıldı,hasar gören kitaplar ayrı tasnif edildi.</p>
+    </div>
+
+    <div class="word">
+        <h2>MEBHÛZ</h2>
+        <p class="meaning">Anlamı: Şaşmış, şaşırmış, hayrette kalmış, şaşkın</p>
+        <p class="example">Örnek: O kadar güzel bir manzaraydı ki herkes mebhûz halde bakakaldı.</p>
+    </div>
+
+    <div class="word">
+        <h2>MEBZÛL</h2>
+        <p class="meaning">Anlamı: Bol, çok</p>
+        <p class="example">Örnek: Bahar, toprağa mebzûl bereketini cömertçe sunmuştu.</p>
+    </div>
+
+    <div class="word">
+        <h2>MEFAHİR</h2>
+        <p class="meaning">Anlamı: Övünülecek şeyler</p>
+        <p class="example">Örnek: Hocamız, toplantıda “geçmişin mefahirini yaşatmak”tan söz açtı. </p>
+    </div>
+
+    <div class="word">
+        <h2>MEHÎB</h2>
+        <p class="meaning">Anlamı: Heybetli, görkemli, saygı uyandıran, ağırbaşlı</p>
+        <p class="example">Örnek: Mehîb duruşuyla herkesin dikkatini çekti.</p>
+    </div>
+
+    <div class="word">
+        <h2>MELÂL</h2>
+        <p class="meaning">Anlamı: Hüzün, keder, iç sıkıntısı</p>
+        <p class="example">Örnek: İçindeki melâle rağmen dik durmayı bildi.</p>
+    </div>
+
+    <div class="word">
+        <h2>MEMAT</h2>
+        <p class="meaning">Anlamı: Ölüm</p>
+        <p class="example">Örnek: Bu işi mutlaka halletmelisin,unutma hayat memat meselesi!</p>
+    </div>
+
+    <div class="word">
+        <h2>MERÂM</h2>
+        <p class="meaning">Anlamı: İstek, amaç, dilek</p>
+        <p class="example">Örnek: Yazar,şiirinde merâmını açıkça dile getirmiş.</p>
+    </div>
+
+    <div class="word">
+        <h2>MERSİYE</h2>
+        <p class="meaning">Anlamı: Ölen kişinin ardından yazılan ağıt, ölüm teması işleyen şiir türü</p>
+        <p class="example">Örnek: Ünlü şâir, genç yaşta ölen dostu için bir mersiye kaleme aldı.</p>
+    </div>
+
+    <div class="word">
+        <h2>MEVCÛDÂT</h2>
+        <p class="meaning">Anlamı: Varlıklar, mevcut olan her şey</p>
+        <p class="example">Örnek: Kâinattaki bütün mevcûdât Allah’ın kudretinin göstergesidir.</p>
+    </div>
+
+    <div class="word">
+        <h2>MEVVAC</h2>
+        <p class="meaning">Anlamı: Dalgalı, dalga dalga olan</p>
+        <p class="example">Örnek: Tekne burnu döndüğünde olanca hışmıyla kapkara kesilmiş mevvac denizle yüz yüze geldi.</p>
+    </div>
+
+    <div class="word">
+        <h2>MEZBÛHÂNE</h2>
+        <p class="meaning">Anlamı: Boğazlanır gibi, çaresiz bir biçimde</p>
+        <p class="example">Örnek: Adamın sesi mezbûhâne bir şekilde yankılandı.</p>
+    </div>
+
+    <div class="word">
+        <h2>MEZRÛÂT</h2>
+        <p class="meaning">Anlamı: Ekilen şeyler, ekinler, tarım ürünleri</p>
+        <p class="example">Örnek: Mezrûâtımızı çeşitli firmalardan temin ediyoruz.</p>
+    </div>
+
+    <div class="word">
+        <h2>MU'TÂD</h2>
+        <p class="meaning">Anlamı: Alışılmış, alışkın olunan, âdet edinilmiş</p>
+        <p class="example">Örnek: Senin mu’tâd olan konuşkanlığını geç göstermen hepimizi şaşırttı.</p>
+    </div>
+
+    <div class="word">
+        <h2>MUBASSIR</h2>
+        <p class="meaning">Anlamı: Gözetici, bekleyici, bakıcı</p>
+        <p class="example">Örnek: Hastanın yanında uyuklayan mubassırdan başka odada kimse kalmamıştı.</p>
+    </div>
+
+    <div class="word">
+        <h2>MUKARRER</h2>
+        <p class="meaning">Anlamı: Kaçınılmaz, kesin, kararlaştırılmış</p>
+        <p class="example">Örnek: Aklını başına almadığın müddetçe bu belaları yaşaman mukarrerdir.</p>
+    </div>
+
+    <div class="word">
+        <h2>MÜREKKEP</h2>
+        <p class="meaning">Anlamı: Karışık, bileşik, çeşitli unsurların bir araya gelmesiyle oluşan</p>
+        <p class="example">Örnek: Hayat, mürekkep duygular ve deneyimlerle doludur.</p>
+    </div>
+
+    <div class="word">
+        <h2>MÜHEYKEL</h2>
+        <p class="meaning">Anlamı: İri yapılı, heybetli, cüsseli</p>
+        <p class="example">Örnek: Karşımdaki adamın müheykel sesi de en az görünüşü kadar etkileyiciydi.</p>
+    </div>
+
+    <div class="word">
+        <h2>MÜLEVVES</h2>
+        <p class="meaning">Anlamı: Pis, kirli, murdar</p>
+        <p class="example">Örnek: Bu işi mülevves emellerine alet etme.</p>
+    </div>
+
+    <div class="word">
+        <h2>MÜNÂDİ</h2>
+        <p class="meaning">Anlamı: Duyurucu, ilan eden, çağıran</p>
+        <p class="example">Örnek: Müslümanların namaza çağrılması münâdi tarafından yapılır.</p>
+    </div>
+
+    <div class="word">
+        <h2>MÜLEVVESÂT</h2>
+        <p class="meaning">Anlamı: Kirli şeyler, manevî ya da fiziksel pislikler</p>
+        <p class="example">Örnek: Çağımızın mülevvesâtı ruhumuzu kirletiyor.</p>
+    </div>
+
+    <div class="word">
+        <h2>MÜNHANİ</h2>
+        <p class="meaning">Anlamı: Eğti, bükülmüş</p>
+        <p class="example">Örnek: Uçsuz bucaksız ovada uzan münhani asfalt yollar dışında insana ait hiçbir şeye tesadüf edememiştik.</p>
+    </div>
+
+    <div class="word">
+        <h2>MÜREDDİT</h2>
+        <p class="meaning">Anlamı: Geri dönen, tekrar eden</p>
+        <p class="example">Örnek: Mürekkep müreddit bir şekilde kağıt üzerinde yayılıyordu.</p>
+    </div>
+
+    <div class="word">
+        <h2>MÜNKESİR</h2>
+        <p class="meaning">Anlamı: Kırılmış, kırı; mecaz olarak kırgın, gücenmiş</p>
+        <p class="example">Örnek: Arkadaşının sözlerinden çok münkesir olmuştu.</p>
+    </div>
+
+    <div class="word">
+        <h2>MÜTEŞEKKİR</h2>
+        <p class="meaning">Anlamı: Minnettar, şükran duyan</p>
+        <p class="example">Örnek: Hayatın bana sunduğu tüm güzellikler için müteşekkirim.</p>
+    </div>
+
+    <div class="word">
+        <h2>MÜSTAHİL</h2>
+        <p class="meaning">Anlamı: İmkansız</p>
+        <p class="example">Örnek: Onun futbolda iyi yerlere gelmesi müstahildi, öyle de oldu.</p>
+    </div>
+
+    <div class="word">
+        <h2>MÜSTEAR</h2>
+        <p class="meaning">Anlamı: Takma ad, mahlas</p>
+        <p class="example">Örnek: Yazar,romanlarını müstear bir isimle yayımlamayı tercih etti.</p>
+    </div>
+
+    <div class="word">
+        <h2>MÜTEMADİYEN</h2>
+        <p class="meaning">Anlamı: Aralıksız, kesintisiz, sürekli</p>
+        <p class="example">Örnek: Bir aydır mütemadiyen ders çalışıyorum.</p>
+    </div>
+
+    <div class="word">
+        <h2>MÜTEVEFFA</h2>
+        <p class="meaning">Anlamı: Vefat etmiş olan, rahmetli, merhum</p>
+        <p class="example">Örnek: Müteveffanın kitaplarından başka miras kalan bir şey yoktu.</p>
+    </div>
+
+    <div class="word">
+        <h2>NÂDİM</h2>
+        <p class="meaning">Anlamı: Pişman olan, üzgün kimse</p>
+        <p class="example">Örnek: Kırıcı sözler sarfettiği için nâdim olmuştu fakat geri dönüş yoktu.</p>
+    </div>
+
+    <div class="word">
+        <h2>NÂZIM</h2>
+        <p class="meaning">Anlamı: Şiir, şiirsel eser</p>
+        <p class="example">Örnek: Şiir yazmak, onun en büyük nâzımıydı.</p>
+    </div>
+
+    <div class="word">
+        <h2>NECÂT</h2>
+        <p class="meaning">Anlamı:Kurtuluş,selamet,tehlikeden veya felaketten kurtulma </p>
+        <p class="example">Örnek: Necata kavuşmak için sabırla beklediler.</p>
+    </div>
+
+    <div class="word">
+        <h2>NEŞÎDE</h2>
+        <p class="meaning">Anlamı: Yüksek sesle okunan şiir, koşuk, ilahi</p>
+        <p class="example">Örnek: Aradan uzun zaman geçmesine rağmen o neşidenin bir tek beyitini bile unutmamıştı.</p>
+    </div>
+
+    <div class="word">
+        <h2>NEŞVE</h2>
+        <p class="meaning">Anlamı: Coşku, sevinç, içsel zevk veya manevi sevinç hali</p>
+        <p class="example">Örnek: Baharın gelişiyle içimi tarifsiz bir neşve kapladı.</p>
+    </div>
+
+    <div class="word">
+        <h2>NEVHA</h2>
+        <p class="meaning">Anlamı: Ağlama, feryat, ağıt yakma</p>
+        <p class="example">Örnek: Hava karadığında, yetimhanenin karanlık odalarından nevhalar yükselmeye başladı.</p>
+    </div>
+
+    <div class="word">
+        <h2>NEVHA-İ MATEM</h2>
+        <p class="meaning">Anlamı: Ağıt, ölüye çığlık kopararak ağlamak</p>
+        <p class="example">Örnek: Dayısının cenazesinde yükselen nevha-i matem onu dah çok sarstı.</p>
+    </div>
+
+    <div class="word">
+        <h2>NİDÂ-YI MAĞMÛM</h2>
+        <p class="meaning">Anlamı: Kederli sesleniş, üzüntülü çağrı</p>
+        <p class="example">Örnek: Yaşlı kadının nidâ-yı mağmumu tüm mahallede yankılandı.</p>
+    </div>
+
+    <div class="word">
+        <h2>NİHAN</h2>
+        <p class="meaning">Anlamı: Gizli, saklı, sır olan</p>
+        <p class="example">Örnek:Ona duyduğum sevgiyi hiç açıklamadım,hep nihan tuttum.</p>
+    </div>
+
+    <div class="word">
+        <h2>NİYAZ</h2>
+        <p class="meaning">Anlamı: Yalvarma, yakarma</p>
+        <p class="example">Örnek: Yoksul adam, Allah’tan çocuğunu iyileştirmesini niyaz ederken gözyaşına boğuldu.</p>
+    </div>
+
+    <div class="word">
+        <h2>NÛŞ EYLEMEK</h2>
+        <p class="meaning">Anlamı: Genellkle içki veya su için kullanılan "içmek" fiili</p>
+        <p class="example">Örnek: Aşk şarabını nûş eyleyen gönül huzur bulunur.</p>
+    </div>
+
+    <div class="word">
+        <h2>PERUKÂR</h2>
+        <p class="meaning">Anlamı: Peruk yapan veya satan kimse; saç ustası, saç takma sanatçısı</p>
+        <p class="example">Örnek: Sarayın perukârı, vezirin saçlarını incelikle işlerdi.</p>
+    </div>
+
+    <div class="word">
+        <h2>PEYÂM</h2>
+        <p class="meaning">Anlamı: Haber</p>
+        <p class="example">Örnek: Ayrıldığımızı sonradan gönderdiği peyâmdan öğrendim.</p>
+    </div>
+
+    <div class="word">
+        <h2>PEYKE</h2>
+        <p class="meaning">Anlamı: Haberci, ulak, elçi veya divan görevlisi</p>
+        <p class="example">Örnek: Hükümdarın peykeleri emri ulaştırmak için yurdun dört yanına dağılmıştı.</p>
+    </div>
+
+    <div class="word">
+        <h2>PİNHAN</h2>
+        <p class="meaning">Anlamı: Gizli, saklı, gizlenmiş</p>
+        <p class="example">Örnek: Derdimi pinhan tutardım,herkes beni mutlu sanırdı.</p>
+    </div>
+
+    <div class="word">
+        <h2>REHZEN</h2>
+        <p class="meaning">Anlamı: Yol kesici, eşkıya, haydut</p>
+        <p class="example">Örnek: Rehzenler ormanın derinliklerinde pusuda bekliyorlardı.</p>
+    </div>
+
+    <div class="word">
+        <h2>REVZEN</h2>
+        <p class="meaning">Anlamı: Pencere,ışık girişi,duvardaki küçük açıklık</p>
+        <p class="example">Örnek: Konağın dört tarafı nakışlı revzenlerden içeri giren ışık hüzmeleriyle aydınlanmıştı.</p>
+    </div>
+
+    <div class="word">
+        <h2>RİDÂ</h2>
+        <p class="meaning">Anlamı: Üst giysi, omuza atılan örtü, şal, manto</p>
+        <p class="example">Örnek: Kadının yeşil ridâsı rüzgârda zarifçe zarifçe dalgalanıyordu.</p>
+    </div>
+
+    <div class="word">
+        <h2>RÛH-İ ZÂR</h2>
+        <p class="meaning">Anlamı: İnleyen, acı çeken, sızlayan ruh</p>
+        <p class="example">Örnek: Yaşadığı rûh-i zârın nedeni geçmişte çocuklarına yaşattığı acılar.</p>
+    </div>
+
+    <div class="word">
+        <h2>RÛ-NÜMÂ</h2>
+        <p class="meaning">Anlamı: Yüzünü gösteren, ortaya çıkan belirgin olan</p>
+        <p class="example">Örnek: Ay, bulutların arasından rû-nümâ olup geceyi aydınlattı.</p>
+    </div>
+
+    <div class="word">
+        <h2>SÂİL</h2>
+        <p class="meaning">Anlamı: Sual eden, dilenci, dilenen</p>
+        <p class="example">Örnek: Sokağın köşesinde dilenen sâil,benden yardım istedi.</p>
+    </div>
+
+    <div class="word">
+        <h2>SENG-İ MEZAR</h2>
+        <p class="meaning">Anlamı: Mezar taşı</p>
+        <p class="example">Örnek: Seng-i mezarı üzerine hiçbir şey yazılmasını istemedi.</p>
+    </div>
+
+    <div class="word">
+        <h2>SEYYİE</h2>
+        <p class="meaning">Anlamı: Kötülük, yanlış veya kötü bir davranış sonucu karşılaşılan kötü durum</p>
+        <p class="example">Örnek: Bir seyyie bin iyiliği gölgeleyebilir; bu yüzden dilini tutmak en büyük iyiliktir.</p>
+    </div>
+
+    <div class="word">
+        <h2>SÜRÛD-İ ÜMÎD</h2>
+        <p class="meaning">Anlamı: Umut şarkısı, umyt dolu ezgi</p>
+        <p class="example">Örnek: Çocukların şarkısı herkese sürûd-ı ümîd oldu.</p>
+    </div>
+
+    <div class="word">
+        <h2>SÜTRE</h2>
+        <p class="meaning">Anlamı:Bir şeyi gizleyen,arkasını kapatan, görünmesini engelleyen perde, örtü, gizleyen şey </p>
+        <p class="example">Örnek: Büyük ve kırmızı bir sütre sahneyi kapatıyordu.</p>
+    </div>
+
+    <div class="word">
+        <h2>ŞEHÂMET</h2>
+        <p class="meaning">Anlamı: Yiğitlik, kahramanlık, cesaret</p>
+        <p class="example">Örnek: Savaşta gösterdiği şehâmet, tüm köyün takdirini kazandı.</p>
+    </div>
+
+    <div class="word">
+        <h2>ŞETARET</h2>
+        <p class="meaning">Anlamı: Neşe, canlılık, sevinç</p>
+        <p class="example">Örnek: Çocuklar şetaret içindeydi.</p>
+    </div>
+  
+    <div class="word">
+        <h2>TAHARRİ</h2>
+        <p class="meaning">Anlamı: Bir şeyin araştırılması, incelenmesi, izinin sürülmesi</p>
+        <p class="example">Örnek: Günlerdir bir taharri memuru tarafından takip edildiğini anlamıştı.</p>
+    </div>
+
+    <div class="word">
+        <h2>TAHASSÜR</h2>
+        <p class="meaning">Anlamı: Derin üzüntü pişmanlık, özlem, iç geçirme</p>
+        <p class="example">Örnek: Babasını kaybetmesiyle geçirdiği tahassür kelimelere dökülemezdi.</p>
+    </div>
+
+    <div class="word">
+        <h2>TALÂKAT</h2>
+        <p class="meaning">Anlamı: Beceri, iş yapabilme, olgunluk</p>
+        <p class="example">Örnek:Çalıştığım yerdeki ustabaşı pek bir talâkat sahibiydi.</p>
+    </div>
+
+    <div class="word">
+        <h2>TARÎK</h2>
+        <p class="meaning">Anlamı: Yol, gidişat</p>
+        <p class="example">Örnek: Tarîkin karanlık olsa bile sabırla yürümelisin.</p>
+    </div>
+
+    <div class="word">
+        <h2>TEB'ÎD</h2>
+        <p class="meaning">Anlamı: Uzak etmek, uzaklaştırma, sürgün etme</p>
+        <p class="example">Örnek:Bu olaydan sonra suçluların teb'îdine karar verildi. </p>
+    </div>
+
+    <div class="word">
+        <h2>TERAKKİ</h2>
+        <p class="meaning">Anlamı: İlerleme, yükselme, gelişme</p>
+        <p class="example">Örnek: Bilim ve sanat sayesinde toplumlar terakki eder.</p>
+    </div>
+
+    <div class="word">
+        <h2>TERÂNE</h2>
+        <p class="meaning">Anlamı: Şarkı, melodi, ezgi</p>
+        <p class="example">Örnek: Bu terânelere karnımız tok,sen doğruları söyle!</p>
+    </div>
+
+    <div class="word">
+        <h2>TÜRÂB</h2>
+        <p class="meaning">Anlamı: Toprak, toprak parçası</p>
+        <p class="example">Örnek: "Ayağının türâbı olayım gitme!" diye yalvardı.</p>
+    </div>
+
+    <div class="word">
+        <h2>UFÛL</h2>
+        <p class="meaning">Anlamı: Batma, sönme, gerileme</p>
+        <p class="example">Örnek: Güneşin ufûlüyle birlikte etrafa bir sessizlik çöktü.</p>
+    </div>
+
+    <div class="word">
+        <h2>VAHDETZÂR-I YEZDAN</h2>
+        <p class="meaning">Anlamı: Allah'ın birliğinin hissedildiği yer</p>
+        <p class="example">Örnek: Vahdetzâr-ı Yezdan, şairin gönül evinde tecelli eder.</p>
+    </div>
+
+    <div class="word">
+        <h2>VAHY-İ BÜLEND</h2>
+        <p class="meaning">Anlamı: Allah'ın yüceliğini belirtmek için kullanılır.Allah'tan gelen yüce bildiri</p>
+        <p class="example">Örnek: Divan şairi,aşkını ilahi boyuta taşımak için sevgilinin bakışlarını vahy-i bülende benzetti.</p>
+    </div>
+
+    <div class="word">
+        <h2>VÂKIÂ</h2>
+        <p class="meaning">Anlamı: Olay, gerçekleşmiş olay</p>
+        <p class="example">Örnek:Bu vâkıâ uzun zaman insanların zihninden silinmedi. </p>
+    </div>
+
+    <div class="word">
+        <h2>YE'S</h2>
+        <p class="meaning">Anlamı: Umutsuzluk, ümitsizlik</p>
+        <p class="example">Örnek: Gelemeyeceğini düşünmek içimdeki ye’si büyüttü.</p>
+    </div>
+
+    <div class="word">
+        <h2>ZULMET-İ RÛŞEN</h2>
+        <p class="meaning">Aydınlık karanlık; hem karanlık hem de içten parlayan bir hal (zıt anlamların birleşimi)</p>
+        <p class="example">Örnek: Gözlerinde zulmet-i rûşen gibi bir derinlik vardı, hem karanlık hem büyüleyici.</p>
+    </div>
+      
+<footer>
+    <img src="baal.png" alt="Okul Logosu">
+    Biga Atatürk Anadolu Lisesi © 2025
+</footer>
+
+<script>
+    const input = document.getElementById('searchInput');
+    const words = document.querySelectorAll('.word');
+    input.addEventListener('keyup', function() {
+        const filter = input.value.toLowerCase();
+        words.forEach(word => {
+            const text = word.innerText.toLowerCase();
+            word.style.display = text.includes(filter) ? '' : 'none';
+        });
+    });
+</script>
+
+</body>
+</html>
+
+
+
+
